@@ -1,6 +1,6 @@
 var bow , arrow,  background;
 var bowImage, arrowImage, green_balloonImage, red_balloonImage, pink_balloonImage ,blue_balloonImage, backgroundImage;
-
+var score;
 function preload(){
   
   backgroundImage = loadImage("background0.png");
@@ -28,11 +28,14 @@ function setup() {
   bow.addImage(bowImage); 
   bow.scale = 1;
   
+  score = 0;
 }
 
 function draw() {
  background(0);
-    
+    text("Pontuação "+score, 300, 390);
+    textSize(20);
+  
     scene.velocityX = -3 
 
     if (scene.x < 0){
